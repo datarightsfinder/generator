@@ -1,0 +1,1 @@
+# RightsBase Generator
