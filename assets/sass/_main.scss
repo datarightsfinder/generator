@@ -96,6 +96,12 @@ a {
   display: none;
 }
 
+.alpaca-array-actionbar-action {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 /* Custom controls */
 .radio,
 .checkbox {
@@ -121,6 +127,10 @@ a {
       color: #FFF;
     }
   }
+}
+
+.mark-as-missing {
+  margin-bottom: 10px;
 }
 
 /* Contribute buttons */

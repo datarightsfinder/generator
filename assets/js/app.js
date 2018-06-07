@@ -172,6 +172,13 @@ $(function() {
       var addToggle = [];
 
       $(".checkbox").each(function(i, e) {
+        // Ignore data missing toggles
+        if ($(e).attr('name').includes('isMissing')) {
+          $(e).addClass('mark-as-missing');
+          $(e).find('label').append("Mark as missing");
+          return;
+        }
+
         // Find where label-less checkboxes are
         var labelText = $(e).find("label").text().trim();
 

@@ -288,32 +288,70 @@
     },
     "dataProtectionOfficer": {
       "helperPosition": "above",
-      "label": "Who is their data protection officer?",
-      "helper": ""
+      "label": "Do they have a Data Protection Officer?",
+      "helper": "",
+      "fields": {
+        "present": {
+          "type": "radio",
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false,
+          "hideNone": true
+        }
+      }
     },
     "dataProtectionRegister": {
       "helperPosition": "above",
       "label": "Is the organisation in a data protection register?",
-      "helper": "Find the details of this organisation in a national data processors register, like the <a href=\"https://ico.org.uk/about-the-ico/what-we-do/register-of-fee-payers/\" target=\"_blank\">ICO register of fee payers</a>. Some countries may not have one."
-    },
-    "internationalTransfer": {
-      "helperPosition": "above",
-      "label": "How does the organisation protect data outside the EEA?",
-      "helper": "",
+      "helper": "Find the details of this organisation in a national data processors register, like the <a href=\"https://ico.org.uk/about-the-ico/what-we-do/register-of-fee-payers/\" target=\"_blank\">ICO register of fee payers</a>. Some countries may not have one.",
       "fields": {
-        "dataProcessingAddendum": {
-          "fields": {
-            "type": {
-              "type": "radio",
-              "optionLabels": [
-                "Sign and return a form",
-                "Change a setting",
-                "Part of Terms of Service",
-                "None"
-              ],
-              "hideNone": true
-            }
-          }
+        "present": {
+          "type": "radio",
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false,
+          "hideNone": true
+        }
+      }
+    },
+    "privacyShield": {
+      "helperPosition": "above",
+      "helper": "",
+      "label": "Is this organisation part of the US-EU Privacy Shield Framework?",
+      "fields": {
+        "present": {
+          "type": "radio",
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false,
+          "hideNone": true
+        }
+      }
+    },
+    "dataProcessingAddendum": {
+      "helperPosition": "above",
+      "helper": "",
+      "label": "Does this organisation offer a data processing addendum?",
+      "fields": {
+        "present": {
+          "type": "radio",
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false,
+          "hideNone": true
+        },
+        "type": {
+          "type": "radio",
+          "optionLabels": [
+            "Sign and return a form",
+            "Change a setting",
+            "Part of Terms of Service"
+          ],
+          "hideNone": true
         },
         "notes": {
           "type": "textarea"
@@ -326,6 +364,7 @@
       "helper": "",
       "fields": {
         "list": {
+          "label": "Summary",
           "hideToolbarWithChildren": false,
           "toolbarSticky": true,
           "toolbarStyle": "link",
@@ -340,7 +379,17 @@
             ]
           }
         },
+        "specificity": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "General", "Specific"
+          ]
+        },
         "notes": {
+          "type": "textarea"
+        },
+        "sourceText": {
           "type": "textarea"
         }
       }
@@ -352,6 +401,13 @@
       "fields": {
         "notes": {
           "type": "textarea"
+        },
+        "specificity": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "General", "Specific"
+          ]
         }
       }
     },
@@ -407,6 +463,13 @@
       "label": "Do they use automated decision making?",
       "helper": "",
       "fields": {
+        "usesAutomatedDecisionMaking": {
+          "hideNone": true,
+          "optionLabels": [
+            "Unknown", "Yes", "No"
+          ],
+          "sort": false
+        },
         "notes": {
           "type": "textarea"
         }
@@ -417,6 +480,13 @@
       "label": "Do they have information on how to make a complaint?",
       "helper": "",
       "fields": {
+        "present": {
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
         "notes": {
           "type": "textarea"
         }
@@ -424,17 +494,25 @@
     },
     "securityStandards": {
       "helperPosition": "above",
-      "label": "Do they mention how they secure data?",
+      "label": "Do they have information about how they secure data?",
       "helper": "",
       "fields": {
-        "specificity": {
+        "present": {
+          "hideNone": true,
           "optionLabels": [
-            "Specifically", "Generally", "No mention"
+            "Yes", "No"
           ],
-          "hideNone": true
+          "sort": false
         },
         "notes": {
           "type": "textarea"
+        },
+        "specificity": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "General", "Specific"
+          ]
         }
       }
     },
@@ -542,6 +620,13 @@
     "unusualProcessingPurposes": {
       "label": "Do they process data for unusual purposes?",
       "fields": {
+        "present": {
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
         "notes": {
           "type": "textarea"
         }
@@ -551,16 +636,28 @@
       "label": "What is their privacy notice like?",
       "fields": {
         "plainLanguage": {
-          "label": "Was it written in plain language?"
+          "label": "Was it written in plain language?",
+          "sort": false,
+          "optionLabels": [ "Yes", "No" ],
+          "hideNone": true
         },
         "definiteLanguage": {
-          "label": "Was it written in certain language?"
+          "label": "Was it written in certain language?",
+          "sort": false,
+          "optionLabels": [ "Yes", "No" ],
+          "hideNone": true
         },
         "easyToFind": {
-          "label": "Was it easy to find the privacy notice?"
+          "label": "Was it easy to find the privacy notice?",
+          "sort": false,
+          "optionLabels": [ "Yes", "No" ],
+          "hideNone": true
         },
         "legibleDesign": {
-          "label": "Was the privacy notice easy to navigate?"
+          "label": "Was the privacy notice easy to navigate?",
+          "sort": false,
+          "optionLabels": [ "Yes", "No" ],
+          "hideNone": true
         }
       }
     }

@@ -306,6 +306,13 @@
       "$id": "/properties/dataProtectionOfficer",
       "type": "object",
       "properties": {
+        "present": {
+          "$id": "/properties/dataProtectionOfficer/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
         "name": {
           "$id": "/properties/dataProtectionOfficer/properties/name",
           "type": "string",
@@ -348,6 +355,13 @@
       "$id": "/properties/dataProtectionRegister",
       "type": "object",
       "properties": {
+        "present": {
+          "$id": "/properties/dataProtectionRegister/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
         "identifier": {
           "$id": "/properties/dataProtectionRegister/properties/identifier",
           "type": "string",
@@ -368,46 +382,51 @@
         }
       }
     },
-    "internationalTransfer": {
-      "$id": "/properties/internationalTransfer",
+    "privacyShield": {
+      "$id": "/properties/privacyShield",
       "type": "object",
       "properties": {
-        "privacyShieldUrl": {
-          "$id": "/properties/internationalTransfer/properties/privacyShieldUrl",
+        "present": {
+          "$id": "/properties/privacyShield/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "url": {
+          "$id": "/properties/privacyShield/properties/url",
           "type": "string",
           "title": "US–EU Privacy Shield certificate URL"
+        }
+      }
+    },
+    "dataProcessingAddendum": {
+      "$id": "/properties/dataProcessingAddendum",
+      "type": "object",
+      "properties": {
+        "present": {
+          "$id": "/properties/dataProcessingAddendum/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
         },
-        "dataProcessingAddendum": {
-          "$id": "/properties/internationalTransfer/properties/dataProcessingAddendum",
-          "type": "object",
-          "properties": {
-            "type": {
-              "$id": "/properties/internationalTransfer/properties/dataProcessingAddendum/properties/type",
-              "type": "string",
-              "title": "Model clauses type",
-              "enum": [
-                "form", "setting", "assumed", "none"
-              ]
-            },
-            "url": {
-              "$id": "/properties/internationalTransfer/properties/dataProcessingAddendum/properties/url",
-              "type": "string",
-              "title": "Model clauses URL",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
+        "type": {
+          "$id": "/properties/dataProcessingAddendum/properties/type",
+          "type": "string",
+          "title": "Type",
+          "enum": [ "form", "setting", "assumed" ]
+        },
+        "url": {
+          "$id": "/properties/dataProcessingAddendum/properties/url",
+          "type": "string",
+          "title": "URL",
+          "default": ""
         },
         "notes": {
-          "$id": "/properties/internationalTransfer/properties/notes",
+          "$id": "/properties/dataProcessingAddendum/properties/notes",
           "type": "string",
-          "title": "Notes",
-          "default": "",
-          "examples": [
-            ""
-          ]
+          "title": "Notes"
         }
       }
     },
@@ -415,23 +434,39 @@
       "$id": "/properties/thirdParties",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/thirdParties/properties/isMissing",
+          "type": "boolean"
+        },
         "list": {
           "$id": "/properties/thirdParties/properties/list",
           "type": "array",
           "items": {
             "$id": "/properties/thirdParties/properties/list/items",
-            "type": "string",
-            "title": "",
-            "default": "",
-            "examples": [
-              ""
-            ]
+            "type": "string"
           }
+        },
+        "specificity": {
+          "$id": "/properties/thirdParties/properties/specificity",
+          "type": "string",
+          "title": "Specificity",
+          "enum": [
+            "general", "specific"
+          ]
         },
         "notes": {
           "$id": "/properties/thirdParties/properties/notes",
           "type": "string",
           "title": "Notes",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/thirdParties/properties/sourceText",
+          "type": "string",
+          "title": "Source text",
           "default": "",
           "examples": [
             ""
@@ -443,10 +478,22 @@
       "$id": "/properties/retentionRules",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/retentionRules/properties/isMissing",
+          "type": "boolean"
+        },
         "notes": {
           "$id": "/properties/retentionRules/properties/notes",
           "type": "string",
           "title": "Notes"
+        },
+        "specificity": {
+          "$id": "/properties/retentionRules/properties/specificity",
+          "type": "string",
+          "title": "Specificity",
+          "enum": [
+            "general", "specific"
+          ]
         }
       }
     },
@@ -454,9 +501,14 @@
       "$id": "/properties/dataTypesCollected",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/dataTypesCollected/properties/isMissing",
+          "type": "boolean"
+        },
         "list": {
           "$id": "/properties/dataTypesCollected/properties/list",
           "type": "array",
+          "title": "List",
           "items": {
             "$id": "/properties/dataTypesCollected/properties/list/items",
             "type": "string",
@@ -510,8 +562,10 @@
       "properties": {
         "usesAutomatedDecisionMaking": {
           "$id": "/properties/automatedDecisionMaking/properties/usesAutomatedDecisionMaking",
-          "type": "boolean",
-          "title": ""
+          "type": "string",
+          "enum": [
+            "unknown", "present", "not_present"
+          ]
         },
         "notes": {
           "$id": "/properties/automatedDecisionMaking/properties/notes",
@@ -530,8 +584,11 @@
       "properties": {
         "present": {
           "$id": "/properties/complaintInformation/properties/present",
-          "type": "boolean",
-          "title": ""
+          "type": "string",
+          "title": "",
+          "enum": [
+            "present", "not_present"
+          ]
         },
         "notes": {
           "$id": "/properties/complaintInformation/properties/notes",
@@ -548,12 +605,12 @@
       "$id": "/properties/securityStandards",
       "type": "object",
       "properties": {
-        "specificity": {
-          "$id": "/properties/securityStandards/properties/specificity",
+        "present": {
+          "$id": "/properties/complaintInformation/properties/present",
           "type": "string",
           "title": "",
           "enum": [
-            "specific", "general", "none"
+            "present", "not_present"
           ]
         },
         "url": {
@@ -573,6 +630,14 @@
           "examples": [
             ""
           ]
+        },
+        "specificity": {
+          "$id": "/properties/securityStandards/properties/specificity",
+          "type": "string",
+          "title": "Specificity",
+          "enum": [
+            "general", "specific"
+          ]
         }
       }
     },
@@ -580,6 +645,10 @@
       "$id": "/properties/lawfulBases",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/lawfulBases/properties/isMissing",
+          "type": "boolean"
+        },
         "consent": {
           "$id": "/properties/lawfulBases/properties/consent",
           "type": "object",
@@ -680,6 +749,10 @@
       "$id": "/properties/rights",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/rights/properties/isMissing",
+          "type": "boolean"
+        },
         "general": {
           "$id": "/properties/rights/properties/general",
           "type": "object",
@@ -1142,6 +1215,14 @@
       "$id": "/properties/unusualProcessingPurposes",
       "type": "object",
       "properties": {
+        "present": {
+          "$id": "/properties/unusualProcessingPurposes/properties/present",
+          "type": "string",
+          "title": "",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
         "notes": {
           "$id": "/properties/unusualProcessingPurposes/properties/notes",
           "type": "string",
@@ -1155,19 +1236,31 @@
       "properties": {
         "plainLanguage": {
           "$id": "/properties/transparencyRecommendations/properties/plainLanguage",
-          "type": "boolean"
+          "type": "string",
+          "enum": [
+            "pass", "fail"
+          ]
         },
         "definiteLanguage": {
           "$id": "/properties/transparencyRecommendations/properties/definiteLanguage",
-          "type": "boolean"
+          "type": "string",
+          "enum": [
+            "pass", "fail"
+          ]
         },
         "easyToFind": {
           "$id": "/properties/transparencyRecommendations/properties/easyToFind",
-          "type": "boolean"
+          "type": "string",
+          "enum": [
+            "pass", "fail"
+          ]
         },
         "legibleDesign": {
           "$id": "/properties/transparencyRecommendations/properties/legibleDesign",
-          "type": "boolean"
+          "type": "string",
+          "enum": [
+            "pass", "fail"
+          ]
         }
       }
     }
