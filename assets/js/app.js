@@ -390,13 +390,16 @@ $(function() {
       }
     });
 
-    // Skip if required organisation details are missing
-    // if (
-    //   $("input[name=organisationInformation_name]").val() === "" ||
-    //   $("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === ""
-    // ) {
-    //   return;
-    // }
+    if (
+      $("input[name=organisationInformation_name]").val() === "" ||
+      $("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === ""
+    ) {
+      $('.required-fields-not-ok').show();
+      $('.required-fields-ok').hide();
+    } else {
+      $('.required-fields-ok').show();
+      $('.required-fields-not-ok').hide();
+    }
 
     // Get JSON from form
     var payload = $("#mainForm").alpaca("get").getValue();

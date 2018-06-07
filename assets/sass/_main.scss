@@ -195,3 +195,8 @@ a {
   height: 300px;
   margin-top: 0.5rem;
 }
+
+.required-fields-ok,
+.required-fields-not-ok {
+  display: none;
+}
