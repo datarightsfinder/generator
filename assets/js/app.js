@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 $(function() {
-  $("#form1").alpaca({
+  $("#mainForm").alpaca({
     "schemaSource": "/public/schema.json",
     "optionsSource": "/public/options.json",
     "postRender": function(form) {
@@ -20,18 +20,48 @@ $(function() {
       // Close
       container.attr("data-open", "false");
 
-      $(this).parent().find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-right, legend, .form-custom-button").hide();
+      $(this).parent().find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-left, .pull-right, legend, .form-custom-button").hide();
       $(this).parent().find("legend").eq(0).show();
     } else if (container.attr("data-open") === "false" || !container.attr("data-open")) {
       // Open
       container.attr("data-open", "true");
 
-      $(this).parent().find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-right, legend, .form-custom-button").show();
+      $(this).parent().find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-left, .pull-right, legend").show();
+      $(this).parent().find('.form-custom-button').css({"display":"inline-block"});
     }
   });
 
   // Enable checkbox toggle style
   $("body").on("click", "input:checkbox, input:radio", function(e) {
+    // Allow radio buttons to be deselected
+    if ($(this).attr('type') === 'radio') {
+      if($(this).parent().parent().hasClass('active')) {
+        $(this).prop('checked', false);
+        $(this).parent().parent().removeClass('active');
+
+        var path = $(this).parent().parent().attr('name');
+
+        setTimeout(function() {
+          var payload = $("#mainForm").alpaca("get").getValue();
+
+          path = path.split('_');
+
+          if (path[0]) {
+            delete payload[path[0]];
+          } else if (path[0] && path[1]) {
+            delete payload[path[0]][path[1]];
+          }
+
+          $('#mainForm').alpaca("get").setValue(payload);
+
+          saveLocalStorage();
+          refreshContributeForm();
+        }, 200);
+
+        return;
+      }
+    }
+
     if ($(this).parent().parent().parent().hasClass("boolean-toggle")) {
       return;
     }
@@ -61,30 +91,6 @@ $(function() {
     e.preventDefault();
 
     resetLocalStorage();
-  });
-
-  // Contribute buttons
-  $(".contribute-buttons a").click(function(e) {
-    // Ignore if required fills aren't filled out
-    if ($("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === "") {
-      e.preventDefault();
-      return;
-    }
-
-    // Remove any visible contribution methods
-    $(".contribute-by").hide();
-
-    // Show the selected contribution method
-    if ($(this).text() === "GitHub") {
-      e.preventDefault();
-      $("#contribute-github").fadeIn(250);
-    } else if ($(this).text() === "Email") {
-      $("#contribute-email").fadeIn(250);
-    }
-
-    // Change visual button state
-    $(".contribute-buttons a").removeClass("active");
-    $(this).addClass("active");
   });
 
   // Boolean toggle
@@ -152,17 +158,17 @@ $(function() {
       showFirstField();
 
       // Make legend titles clickable links
-      $("#form1 legend").each(function(i, e) {
+      $("#mainForm legend").each(function(i, e) {
         // Ignore anything that isn't a top level legend
         if ($(e).parents().length !== 11) {
           return;
         }
 
-        var text = $(e).text().trim();
+        var text = $(e).html();
 
         var a = $("<a>");
         a.attr("href", "#");
-        a.text(text);
+        a.append(text);
 
         $(e).empty().append(a);
       });
@@ -175,7 +181,7 @@ $(function() {
         // Ignore data missing toggles
         if ($(e).attr('name').includes('isMissing')) {
           $(e).addClass('mark-as-missing');
-          $(e).find('label').append("Mark as missing");
+          $(e).find('label').append("Can't find this information");
           return;
         }
 
@@ -228,7 +234,7 @@ $(function() {
       // Refresh contribute form
       refreshContributeForm();
 
-      $("#form1 input:radio, #form1 input:checkbox").each(function(i, e) {
+      $("#mainForm input:radio, #mainForm input:checkbox").each(function(i, e) {
         if ($(e).prop("checked")) {
           $(e).parent().parent().addClass("active");
         }
@@ -302,7 +308,7 @@ $(function() {
   });
 
   // Pressing tab and focusing on section opens it
-  $("body").on("keyup", "#form1", function(e) {
+  $("body").on("keyup", "#mainForm", function(e) {
     if (e.which === 9 && $(document.activeElement).parent().hasClass("alpaca-container-label")) {
       $(document.activeElement).trigger("click");
     }
@@ -319,7 +325,7 @@ $(function() {
 
   function saveLocalStorage() {
     // Get form contents
-    var payload = $("#form1").alpaca("get").getValue();
+    var payload = $("#mainForm").alpaca("get").getValue();
 
     // Set "payload" localStorage var with form contents JSON
     localStorage.setItem("payload", JSON.stringify(payload));
@@ -333,30 +339,78 @@ $(function() {
   }
 
   function refreshContributeForm() {
-    // Skip if required organisation details are missing
-    if ($("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === "") {
-      return;
+    var selectedCountry = $('select[name="organisationInformation_registrationCountry"]').val();
+    selectedCountry = selectedCountry.split('_')[0].toLowerCase();
+
+    if (selectedCountry === 'us') {
+      $('[data-alpaca-container-item-name="privacyShield"]').show();
     }
 
-    // Get JSON from form
-    var payload = $("#form1").alpaca("get").getValue();
+    // Use .number as an easy way of selecting each form group
+    $(".number").each(function(i, e) {
+      var inputs = $(this).parent().parent().parent().parent().find('input');
+      var selects = $(this).parent().parent().parent().parent().find('select');
+      var textareas = $(this).parent().parent().parent().parent().find('textarea');
 
-    // Enable buttons
-    $(".contribute-buttons a").animate({ "opacity": 1 }, 250);
+      var filledCount = 0;
+
+      $(selects).each(function(i, e) {
+        if ($(e).val() !== '') {
+          filledCount++;
+        }
+      });
+
+      $(inputs).each(function(i, e) {
+        // text, radio, checkbox
+        var type = $(e).attr('type');
+
+        if (type === 'text') {
+          if ($(e).val() !== '') {
+            filledCount++;
+          }
+        }
+
+        if (type === 'radio' || type === 'checkbox') {
+          if ($(e).prop('checked')) {
+            filledCount++;
+          }
+        }
+      });
+
+      $(textareas).each(function(i, e) {
+        if ($(e).val() !== '') {
+          filledCount++;
+        }
+      });
+
+      if (filledCount > 0) {
+        $(this).parent().parent().parent().parent().addClass('completed');
+      } else {
+        $(this).parent().parent().parent().parent().removeClass('completed');
+      }
+    });
+
+    // Skip if required organisation details are missing
+    // if (
+    //   $("input[name=organisationInformation_name]").val() === "" ||
+    //   $("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === ""
+    // ) {
+    //   return;
+    // }
+
+    // Get JSON from form
+    var payload = $("#mainForm").alpaca("get").getValue();
 
     // Show JSON in text area fields
     $(".generated-json").val(JSON.stringify(payload, null, 2));
 
     // Populate mailto: link for email contributions
-    $(".contribute-buttons a").last().attr("href", "mailto:ian@projectsbyif.com?body=" + JSON.stringify(payload));
+    $("#button-email").attr("href", "mailto:ian@projectsbyif.com?body=" + JSON.stringify(payload));
 
     // Populate fields
     var proposedFilename = $("select[name=organisationInformation_registrationCountry]").val() + $("input[name=organisationInformation_number]").val();
     var proposedSlug = $("select[name=organisationInformation_registrationCountry]").val() + "/" + $("input[name=organisationInformation_number]").val();
 
     $(".contribute-filename").text(proposedFilename);
-
-    $(".contribute-url-preview").attr("href", "/organisation" + proposedSlug)
-      .text("https://example.com/organisation/" + proposedSlug);
   }
 });

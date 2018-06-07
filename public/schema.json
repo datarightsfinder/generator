@@ -23,198 +23,198 @@
           "type": "string",
           "title": "Registration country",
           "enum": [
-            "AF",
-            "AL",
-            "DZ",
-            "AD",
-            "AO",
-            "AG",
-            "AR",
-            "AM",
-            "AU",
-            "AT",
-            "AZ",
-            "BS",
-            "BH",
-            "BD",
-            "BB",
-            "BY",
-            "BE",
-            "BZ",
-            "BJ",
-            "BT",
-            "BO",
-            "BA",
-            "BW",
-            "BR",
-            "BN",
-            "BG",
-            "BF",
-            "MM",
-            "BI",
-            "KH",
-            "CM",
-            "CA",
+            "af",
+            "al",
+            "dz",
+            "ad",
+            "ao",
+            "ag",
+            "ar",
+            "am",
+            "au",
+            "at",
+            "az",
+            "bs",
+            "bh",
+            "bd",
+            "bb",
+            "by",
+            "be",
+            "bz",
+            "bj",
+            "bt",
+            "bo",
+            "ba",
+            "bw",
+            "br",
+            "bn",
+            "bg",
+            "bf",
+            "mm",
+            "bi",
+            "kh",
+            "cm",
+            "ca",
             "ca_nb",
             "ca_nl",
             "ca_ns",
             "ca_pe",
             "ca_qc",
-            "CV",
-            "CF",
-            "TD",
-            "CL",
-            "CN",
-            "CO",
-            "KM",
-            "CG",
-            "CD",
-            "CR",
-            "HR",
-            "CU",
-            "CY",
-            "CZ",
-            "DK",
-            "DJ",
-            "DM",
-            "DO",
-            "TL",
-            "EC",
-            "EG",
-            "SV",
-            "GQ",
-            "ER",
-            "EE",
-            "ET",
-            "FJ",
-            "FI",
-            "FR",
-            "GA",
-            "GM",
-            "GE",
-            "DE",
-            "GH",
-            "GR",
-            "GD",
-            "GT",
-            "GN",
-            "GW",
-            "GY",
-            "HT",
-            "HN",
-            "HU",
-            "IS",
-            "IN",
-            "ID",
-            "IR",
-            "IQ",
-            "IE",
-            "IL",
-            "IT",
-            "CI",
-            "JM",
-            "JP",
-            "JO",
-            "KZ",
-            "KE",
-            "KI",
-            "XK",
-            "KW",
-            "KG",
-            "LA",
-            "LV",
-            "LB",
-            "LS",
-            "LR",
-            "LY",
-            "LI",
-            "LT",
-            "LU",
-            "MK",
-            "MG",
-            "MW",
-            "MY",
-            "MV",
-            "ML",
-            "MT",
-            "MH",
-            "MR",
-            "MU",
-            "MX",
-            "FM",
-            "MD",
-            "MC",
-            "MN",
-            "ME",
-            "MA",
-            "MZ",
-            "NA",
-            "NR",
-            "NP",
-            "NL",
-            "NZ",
-            "NI",
-            "NE",
-            "NG",
-            "KP",
-            "NO",
-            "OM",
-            "PK",
-            "PW",
-            "PA",
-            "PG",
-            "PY",
-            "PE",
-            "PH",
-            "PL",
-            "PT",
-            "QA",
-            "RO",
-            "RU",
-            "RW",
-            "WS",
-            "SM",
-            "ST",
-            "SA",
-            "SN",
-            "RS",
-            "SC",
-            "SL",
-            "SG",
-            "SK",
-            "SI",
-            "SB",
-            "SO",
-            "ZA",
-            "KR",
-            "SS",
-            "ES",
-            "LK",
-            "KN",
-            "LC",
-            "VC",
-            "SD",
-            "SR",
-            "SZ",
-            "SE",
-            "CH",
-            "SY",
-            "TJ",
-            "TZ",
-            "TH",
-            "TG",
-            "TO",
-            "TT",
-            "TN",
-            "TR",
-            "TM",
-            "TV",
-            "UG",
-            "UA",
-            "AE_AZ",
-            "AE_DU",
-            "GB",
-            "UY",
+            "cv",
+            "cf",
+            "td",
+            "cl",
+            "cn",
+            "co",
+            "km",
+            "cg",
+            "cd",
+            "cr",
+            "hr",
+            "cu",
+            "cy",
+            "cz",
+            "dk",
+            "dj",
+            "dm",
+            "do",
+            "tl",
+            "ec",
+            "eg",
+            "sv",
+            "gq",
+            "er",
+            "ee",
+            "et",
+            "fj",
+            "fi",
+            "fr",
+            "ga",
+            "gm",
+            "ge",
+            "de",
+            "gh",
+            "gr",
+            "gd",
+            "gt",
+            "gn",
+            "gw",
+            "gy",
+            "ht",
+            "hn",
+            "hu",
+            "is",
+            "in",
+            "id",
+            "ir",
+            "iq",
+            "ie",
+            "il",
+            "it",
+            "ci",
+            "jm",
+            "jp",
+            "jo",
+            "kz",
+            "ke",
+            "ki",
+            "xk",
+            "kw",
+            "kg",
+            "la",
+            "lv",
+            "lb",
+            "ls",
+            "lr",
+            "ly",
+            "li",
+            "lt",
+            "lu",
+            "mk",
+            "mg",
+            "mw",
+            "my",
+            "mv",
+            "ml",
+            "mt",
+            "mh",
+            "mr",
+            "mu",
+            "mx",
+            "fm",
+            "md",
+            "mc",
+            "mn",
+            "me",
+            "ma",
+            "mz",
+            "na",
+            "nr",
+            "np",
+            "nl",
+            "nz",
+            "ni",
+            "ne",
+            "ng",
+            "kp",
+            "no",
+            "om",
+            "pk",
+            "pw",
+            "pa",
+            "pg",
+            "py",
+            "pe",
+            "ph",
+            "pl",
+            "pt",
+            "qa",
+            "ro",
+            "ru",
+            "rw",
+            "ws",
+            "sm",
+            "st",
+            "sa",
+            "sn",
+            "rs",
+            "sc",
+            "sl",
+            "sg",
+            "sk",
+            "si",
+            "sb",
+            "so",
+            "za",
+            "kr",
+            "ss",
+            "es",
+            "lk",
+            "kn",
+            "lc",
+            "vc",
+            "sd",
+            "sr",
+            "sz",
+            "se",
+            "ch",
+            "sy",
+            "tj",
+            "tz",
+            "th",
+            "tg",
+            "to",
+            "tt",
+            "tn",
+            "tr",
+            "tm",
+            "tv",
+            "ug",
+            "ua",
+            "ae_az",
+            "ae_du",
+            "gb",
+            "uy",
             "us_al",
             "us_ak",
             "us_az",
@@ -228,7 +228,7 @@
             "us_ga",
             "us_hi",
             "us_id",
-            "US_IL",
+            "us_il",
             "us_in",
             "us_ia",
             "us_ks",
@@ -266,14 +266,14 @@
             "us_wv",
             "us_wi",
             "us_wy",
-            "UZ",
-            "VU",
-            "VA",
-            "VE",
-            "VN",
-            "YE",
-            "ZM",
-            "ZW"
+            "uz",
+            "vu",
+            "va",
+            "ve",
+            "vn",
+            "ye",
+            "zm",
+            "zw"
           ]
         }
       }
@@ -284,11 +284,7 @@
       "items": {
         "$id": "/properties/organisationUrls/items",
         "type": "string",
-        "title": "",
-        "default": "",
-        "examples": [
-          ""
-        ]
+        "title": ""
       }
     },
     "privacyNoticeUrl": {
@@ -385,6 +381,7 @@
     "privacyShield": {
       "$id": "/properties/privacyShield",
       "type": "object",
+      "helperPosition": "above",
       "properties": {
         "present": {
           "$id": "/properties/privacyShield/properties/present",
@@ -414,7 +411,7 @@
         "type": {
           "$id": "/properties/dataProcessingAddendum/properties/type",
           "type": "string",
-          "title": "Type",
+          "title": "How do users enter into a data processing addendum?",
           "enum": [ "form", "setting", "assumed" ]
         },
         "url": {
@@ -423,10 +420,15 @@
           "title": "URL",
           "default": ""
         },
-        "notes": {
-          "$id": "/properties/dataProcessingAddendum/properties/notes",
+        "observations": {
+          "$id": "/properties/dataProcessingAddendum/properties/observations",
           "type": "string",
-          "title": "Notes"
+          "title": "Observations"
+        },
+        "sourceText": {
+          "$id": "/properties/dataProcessingAddendum/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste data processing addendum information from privacy policy"
         }
       }
     },
@@ -451,13 +453,13 @@
           "type": "string",
           "title": "Specificity",
           "enum": [
-            "general", "specific"
+            "specific", "general"
           ]
         },
-        "notes": {
-          "$id": "/properties/thirdParties/properties/notes",
+        "observations": {
+          "$id": "/properties/thirdParties/properties/observations",
           "type": "string",
-          "title": "Notes",
+          "title": "Observations",
           "default": "",
           "examples": [
             ""
@@ -466,7 +468,7 @@
         "sourceText": {
           "$id": "/properties/thirdParties/properties/sourceText",
           "type": "string",
-          "title": "Source text",
+          "title": "Copy and paste third parties section from privacy notice",
           "default": "",
           "examples": [
             ""
@@ -482,35 +484,53 @@
           "$id": "/properties/retentionRules/properties/isMissing",
           "type": "boolean"
         },
-        "notes": {
-          "$id": "/properties/retentionRules/properties/notes",
+        "summary": {
+          "$id": "/properties/retentionRules/properties/summary",
           "type": "string",
-          "title": "Notes"
+          "title": "Summary"
         },
-        "specificity": {
-          "$id": "/properties/retentionRules/properties/specificity",
+        "observations": {
+          "$id": "/properties/retentionRules/properties/observations",
           "type": "string",
-          "title": "Specificity",
+          "title": "Observations"
+        },
+        "specificityCategory": {
+          "$id": "/properties/retentionRules/properties/specificityCategory",
+          "type": "string",
+          "title": "Do they refer to specific categories of data?",
           "enum": [
-            "general", "specific"
+            "specific", "general"
           ]
+        },
+        "specificityTime": {
+          "$id": "/properties/retentionRules/properties/specificityTime",
+          "type": "string",
+          "title": "Do they mention specific time periods?",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/retentionRules/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste retention rules from privacy policy"
         }
       }
     },
-    "dataTypesCollected": {
-      "$id": "/properties/dataTypesCollected",
+    "dataCategoriesCollected": {
+      "$id": "/properties/dataCategoriesCollected",
       "type": "object",
       "properties": {
         "isMissing": {
-          "$id": "/properties/dataTypesCollected/properties/isMissing",
+          "$id": "/properties/dataCategoriesCollected/properties/isMissing",
           "type": "boolean"
         },
         "list": {
-          "$id": "/properties/dataTypesCollected/properties/list",
+          "$id": "/properties/dataCategoriesCollected/properties/list",
           "type": "array",
           "title": "List",
           "items": {
-            "$id": "/properties/dataTypesCollected/properties/list/items",
+            "$id": "/properties/dataCategoriesCollected/properties/list/items",
             "type": "string",
             "title": "",
             "enum": [
@@ -549,10 +569,15 @@
             ]
           }
         },
-        "notes": {
-          "$id": "/properties/dataTypesCollected/properties/notes",
+        "observations": {
+          "$id": "/properties/dataCategoriesCollected/properties/observations",
           "type": "string",
-          "title": "Notes"
+          "title": "Observations"
+        },
+        "sourceText": {
+          "$id": "/properties/dataCategoriesCollected/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste data categories information from privacy notice"
         }
       }
     },
@@ -567,14 +592,23 @@
             "unknown", "present", "not_present"
           ]
         },
-        "notes": {
-          "$id": "/properties/automatedDecisionMaking/properties/notes",
+        "observations": {
+          "$id": "/properties/automatedDecisionMaking/properties/observations",
           "type": "string",
-          "title": "Notes",
-          "default": "",
-          "examples": [
-            ""
+          "title": "Observations"
+        },
+        "specificity": {
+          "$id": "/properties/automatedDecisionMaking/properties/specificity",
+          "type": "string",
+          "title": "Do they refer to specific categories of data?",
+          "enum": [
+            "specific", "general"
           ]
+        },
+        "sourceText": {
+          "$id": "/properties/automatedDecisionMaking/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste automated decision making information from privacy notice"
         }
       }
     },
@@ -590,14 +624,23 @@
             "present", "not_present"
           ]
         },
-        "notes": {
-          "$id": "/properties/complaintInformation/properties/notes",
+        "observations": {
+          "$id": "/properties/complaintInformation/properties/observations",
           "type": "string",
-          "title": "Notes",
-          "default": "",
-          "examples": [
-            ""
+          "title": "Observations"
+        },
+        "specificity": {
+          "$id": "/properties/complaintInformation/properties/specificity",
+          "type": "string",
+          "title": "Does the privacy policy contain contact details for a data protection authority?",
+          "enum": [
+            "specific", "general"
           ]
+        },
+        "sourceText": {
+          "$id": "/properties/complaintInformation/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste complaints information from privacy notice"
         }
       }
     },
@@ -606,7 +649,7 @@
       "type": "object",
       "properties": {
         "present": {
-          "$id": "/properties/complaintInformation/properties/present",
+          "$id": "/properties/securityStandards/properties/present",
           "type": "string",
           "title": "",
           "enum": [
@@ -622,10 +665,10 @@
             ""
           ]
         },
-        "notes": {
-          "$id": "/properties/securityStandards/properties/notes",
+        "observations": {
+          "$id": "/properties/securityStandards/properties/observations",
           "type": "string",
-          "title": "Notes",
+          "title": "Observations",
           "default": "",
           "examples": [
             ""
@@ -634,9 +677,9 @@
         "specificity": {
           "$id": "/properties/securityStandards/properties/specificity",
           "type": "string",
-          "title": "Specificity",
+          "title": "Do they specify methods of how they secure data?",
           "enum": [
-            "general", "specific"
+            "specific", "general"
           ]
         }
       }
@@ -653,10 +696,10 @@
           "$id": "/properties/lawfulBases/properties/consent",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/consent/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/consent/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -668,10 +711,10 @@
           "$id": "/properties/lawfulBases/properties/contract",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/contract/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/contract/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -683,10 +726,10 @@
           "$id": "/properties/lawfulBases/properties/legalObligation",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/legalObligation/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/legalObligation/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -698,10 +741,10 @@
           "$id": "/properties/lawfulBases/properties/vitalInterests",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/vitalInterests/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/vitalInterests/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -713,14 +756,10 @@
           "$id": "/properties/lawfulBases/properties/publicTask",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/publicTask/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/publicTask/properties/observations",
               "type": "string",
-              "title": "Notes",
-              "default": "",
-              "examples": [
-                ""
-              ]
+              "title": "Observations"
             }
           }
         },
@@ -728,10 +767,10 @@
           "$id": "/properties/lawfulBases/properties/legitimateInterests",
           "type": "object",
           "properties": {
-            "notes": {
-              "$id": "/properties/lawfulBases/properties/legitimateInterests/properties/notes",
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/legitimateInterests/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -739,8 +778,8 @@
             }
           }
         },
-        "notes": {
-          "$id": "/properties/lawfulBases/properties/notes",
+        "observations": {
+          "$id": "/properties/lawfulBases/properties/observations",
           "type": "string"
         }
       }
@@ -799,10 +838,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/general/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/general/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -856,10 +895,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/access/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/access/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -913,10 +952,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/rectification/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/rectification/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -970,10 +1009,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/erasure/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/erasure/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -1027,10 +1066,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/restrictProcessing/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/restrictProcessing/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -1084,10 +1123,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/dataPortability/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/dataPortability/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -1141,10 +1180,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/object/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/object/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -1198,10 +1237,10 @@
                 }
               }
             },
-            "notes": {
-              "$id": "/properties/rights/properties/automatedDecisionMaking/properties/notes",
+            "observations": {
+              "$id": "/properties/rights/properties/automatedDecisionMaking/properties/observations",
               "type": "string",
-              "title": "Notes",
+              "title": "Observations",
               "default": "",
               "examples": [
                 ""
@@ -1223,40 +1262,33 @@
             "present", "not_present"
           ]
         },
-        "notes": {
-          "$id": "/properties/unusualProcessingPurposes/properties/notes",
+        "observations": {
+          "$id": "/properties/unusualProcessingPurposes/properties/observations",
           "type": "string",
-          "title": "Notes"
+          "title": "Observations"
         }
       }
     },
-    "transparencyRecommendations": {
-      "$id": "/properties/transparencyRecommendations",
+    "presentation": {
+      "$id": "/properties/presentation",
       "type": "object",
       "properties": {
         "plainLanguage": {
-          "$id": "/properties/transparencyRecommendations/properties/plainLanguage",
-          "type": "string",
-          "enum": [
-            "pass", "fail"
-          ]
-        },
-        "definiteLanguage": {
-          "$id": "/properties/transparencyRecommendations/properties/definiteLanguage",
+          "$id": "/properties/presentation/properties/plainLanguage",
           "type": "string",
           "enum": [
             "pass", "fail"
           ]
         },
         "easyToFind": {
-          "$id": "/properties/transparencyRecommendations/properties/easyToFind",
+          "$id": "/properties/presentation/properties/easyToFind",
           "type": "string",
           "enum": [
             "pass", "fail"
           ]
         },
-        "legibleDesign": {
-          "$id": "/properties/transparencyRecommendations/properties/legibleDesign",
+        "easyToFindInside": {
+          "$id": "/properties/presentation/properties/easyToFindInside",
           "type": "string",
           "enum": [
             "pass", "fail"

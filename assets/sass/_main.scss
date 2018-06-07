@@ -19,20 +19,39 @@ a {
   a {
     text-decoration: none;
   }
+
+  .number {
+    font-weight: 500;
+    width: 30px;
+    display: inline-block;
+    color: #999;
+  }
 }
 
 .alpaca-form > div > div > div {
   border: #EEE 1px solid;
+  border-left: #EEE 5px solid;
   border-radius: 5px;
   margin-bottom: 10px !important;
   padding-left: 10px;
   padding-right: 10px;
+
+  &.completed {
+    border-left: green 5px solid;
+  }
 }
+
+.alpaca-form > div > div > div > div > div > div > div > div > div {
+  padding-left: 0px;
+}
+
 
 /* Hide non-top level legends */
 .alpaca-form > div > div > div > div > div > div > div > legend {
   display: none;
-  font-size: 0.9em;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin-bottom: 0;
 }
 
 .alpaca-field,
@@ -50,6 +69,7 @@ a {
 
 .alpaca-container-item {
   margin-top: 0 !important;
+  padding-left: 30px;
 }
 
 .alpaca-field-checkbox,
@@ -60,16 +80,24 @@ a {
 .pull-left,
 .pull-right {
   float: left;
+  display: none;
 }
 
 .pull-left {
   width: 85%;
+  margin-top: 0.2rem;
 }
 
 .pull-right {
   width: 15%;
   text-align: center;
   line-height: 40px;
+  margin-top: 0.2rem;
+}
+
+.alpaca-array-toolbar {
+  margin-top: 0.2rem !important;
+  padding-left: 30px;
 }
 
 .alpaca-array-toolbar-action {
@@ -79,7 +107,16 @@ a {
 .alpaca-helper {
   background: #EFEFEF;
   padding: 10px;
-  font-size: 0.8em;
+  font-size: 0.875rem;
+  margin-left: 30px;
+}
+
+[data-alpaca-container-item-name="rights_general_contactInfo"] > div > div > div {
+  padding-left: 0;
+}
+
+[data-alpaca-field-name="rights_general"] legend {
+  font-weight: bold !important;
 }
 
 [data-alpaca-field-path="/rights/access"],
@@ -90,10 +127,30 @@ a {
 [data-alpaca-field-path="/rights/object"],
 [data-alpaca-field-path="/rights/automatedDecisionMaking"] {
   display: none;
+
+  legend {
+    font-weight: 700 !important;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .alpaca-container-item {
+    padding-left: 0;
+  }
+}
+
+[data-alpaca-container-item-name="privacyShield"] {
+  display: none;
 }
 
 .form-custom-button {
   display: none;
+}
+
+#buttonShowAllRights {
+  margin-bottom: 0.4rem;
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
 }
 
 .alpaca-array-actionbar-action {
@@ -133,28 +190,8 @@ a {
   margin-bottom: 10px;
 }
 
-/* Contribute buttons */
-.contribute-buttons {
-  overflow: auto;
-  margin-bottom: 20px;
-
-  a {
-    float: left;
-    text-decoration: none;
-    border: #222 1px solid;
-    border-radius: 4px;
-    font-weight: 600;
-    padding: 10px 10px;
-    margin-right: 10px;
-    opacity: 0.25;
-
-    &.active {
-      background: #222;
-      color: #FFF;
-    }
-  }
-}
-
-.contribute-by {
-  display: none;
+.generated-json {
+  font-family: monospace;
+  height: 300px;
+  margin-top: 0.5rem;
 }

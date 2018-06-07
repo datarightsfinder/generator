@@ -2,7 +2,7 @@
   "fields": {
     "organisationInformation": {
       "helperPosition": "above",
-      "label": "About the organisation",
+      "label": "<span class=\"number\">1</span>About the organisation (required)",
       "helper": "Start by entering some basic details about the organisation. You can look up registration numbers and countries on <a href=\"https://opencorporates.com/\" target=\"_blank\">OpenCorporates</a>.",
       "fields": {
         "registrationCountry": {
@@ -265,7 +265,7 @@
     },
     "organisationUrls": {
       "helperPosition": "above",
-      "label": "What websites do they run?",
+      "label": "<span class=\"number\">2</span>What websites do they run?",
       "helper": "Enter the organisations main website, including any websites for subsiduaries.",
       "hideToolbarWithChildren": false,
       "toolbarSticky": true,
@@ -283,12 +283,12 @@
     },
     "privacyNoticeUrl": {
       "helperPosition": "above",
-      "label": "Where is their privacy notice?",
+      "label": "<span class=\"number\">3</span>Where is their privacy notice?",
       "helper": ""
     },
     "dataProtectionOfficer": {
       "helperPosition": "above",
-      "label": "Do they have a Data Protection Officer?",
+      "label": "<span class=\"number\">4</span>Do they have a Data Protection Officer?",
       "helper": "",
       "fields": {
         "present": {
@@ -303,7 +303,7 @@
     },
     "dataProtectionRegister": {
       "helperPosition": "above",
-      "label": "Is the organisation in a data protection register?",
+      "label": "<span class=\"number\">5</span>Is the organisation in a data protection register?",
       "helper": "Find the details of this organisation in a national data processors register, like the <a href=\"https://ico.org.uk/about-the-ico/what-we-do/register-of-fee-payers/\" target=\"_blank\">ICO register of fee payers</a>. Some countries may not have one.",
       "fields": {
         "present": {
@@ -318,8 +318,8 @@
     },
     "privacyShield": {
       "helperPosition": "above",
-      "helper": "",
-      "label": "Is this organisation part of the US-EU Privacy Shield Framework?",
+      "helper": "The <a href=\"https://www.privacyshield.gov/welcome\" target=\")blank\">Privacy Shield website</a> has a searchable list of organisations in this scheme.",
+      "label": "<span class=\"number\">6</span>Is this organisation part of the US-EU Privacy Shield Framework?",
       "fields": {
         "present": {
           "type": "radio",
@@ -333,8 +333,8 @@
     },
     "dataProcessingAddendum": {
       "helperPosition": "above",
-      "helper": "",
-      "label": "Does this organisation offer a data processing addendum?",
+      "helper": "Organisations that send data outside the EEA may a data processing addendum to ensure data is adequately protected.",
+      "label": "<span class=\"number\">7</span>Does this organisation offer a data processing addendum?",
       "fields": {
         "present": {
           "type": "radio",
@@ -353,18 +353,21 @@
           ],
           "hideNone": true
         },
-        "notes": {
+        "observations": {
+          "type": "textarea"
+        },
+        "sourceText": {
           "type": "textarea"
         }
       }
     },
     "thirdParties": {
       "helperPosition": "above",
-      "label": "What third parties does the organisation share data with?",
+      "label": "<span class=\"number\">8</span>What third parties does the organisation share data with?",
       "helper": "",
       "fields": {
         "list": {
-          "label": "Summary",
+          "label": "List of third parties",
           "hideToolbarWithChildren": false,
           "toolbarSticky": true,
           "toolbarStyle": "link",
@@ -381,12 +384,14 @@
         },
         "specificity": {
           "type": "radio",
+          "label": "Does the policy all mention third parties by name?",
           "hideNone": true,
           "optionLabels": [
-            "General", "Specific"
-          ]
+            "Yes", "No"
+          ],
+          "sort": false
         },
-        "notes": {
+        "observations": {
           "type": "textarea"
         },
         "sourceText": {
@@ -396,24 +401,39 @@
     },
     "retentionRules": {
       "helperPosition": "above",
-      "label": "How long does this organisation keep data for?",
+      "label": "<span class=\"number\">9</span>How long does this organisation keep data for?",
       "helper": "",
       "fields": {
-        "notes": {
+        "summary": {
           "type": "textarea"
         },
-        "specificity": {
+        "observations": {
+          "type": "textarea"
+        },
+        "specificityCategory": {
           "type": "radio",
           "hideNone": true,
           "optionLabels": [
-            "General", "Specific"
-          ]
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "specificityTime": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "sourceText": {
+          "type": "textarea"
         }
       }
     },
-    "dataTypesCollected": {
+    "dataCategoriesCollected": {
       "helperPosition": "above",
-      "label": "What categories of data do they collect?",
+      "label": "<span class=\"number\">10</span>What categories of data do they collect?",
       "helper": "",
       "fields": {
         "list": {
@@ -453,113 +473,145 @@
             "Trade union membership"
           ]
         },
-        "notes": {
+        "observations": {
+          "type": "textarea"
+        },
+        "sourceText": {
           "type": "textarea"
         }
       }
     },
     "automatedDecisionMaking": {
       "helperPosition": "above",
-      "label": "Do they use automated decision making?",
+      "label": "<span class=\"number\">11</span>Do they use automated decision making?",
       "helper": "",
       "fields": {
         "usesAutomatedDecisionMaking": {
           "hideNone": true,
           "optionLabels": [
-            "Unknown", "Yes", "No"
+            "Can't find this information", "Yes", "No"
           ],
           "sort": false
         },
-        "notes": {
-          "type": "textarea"
-        }
-      }
-    },
-    "complaintInformation": {
-      "helperPosition": "above",
-      "label": "Do they have information on how to make a complaint?",
-      "helper": "",
-      "fields": {
-        "present": {
-          "hideNone": true,
-          "optionLabels": [
-            "Yes", "No"
-          ],
-          "sort": false
-        },
-        "notes": {
-          "type": "textarea"
-        }
-      }
-    },
-    "securityStandards": {
-      "helperPosition": "above",
-      "label": "Do they have information about how they secure data?",
-      "helper": "",
-      "fields": {
-        "present": {
-          "hideNone": true,
-          "optionLabels": [
-            "Yes", "No"
-          ],
-          "sort": false
-        },
-        "notes": {
+        "observations": {
           "type": "textarea"
         },
         "specificity": {
           "type": "radio",
           "hideNone": true,
           "optionLabels": [
-            "General", "Specific"
-          ]
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "sourceText": {
+          "type": "textarea"
+        }
+      }
+    },
+    "complaintInformation": {
+      "helperPosition": "above",
+      "label": "<span class=\"number\">12</span>Do they have information on how to make a complaint?",
+      "helper": "",
+      "fields": {
+        "present": {
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "observations": {
+          "type": "textarea"
+        },
+        "specificity": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "sourceText": {
+          "type": "textarea"
+        }
+      }
+    },
+    "securityStandards": {
+      "helperPosition": "above",
+      "label": "<span class=\"number\">13</span>Do they have information about how they secure data?",
+      "helper": "",
+      "fields": {
+        "present": {
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
+        },
+        "observations": {
+          "type": "textarea"
+        },
+        "specificity": {
+          "type": "radio",
+          "hideNone": true,
+          "optionLabels": [
+            "Yes", "No"
+          ],
+          "sort": false
         }
       }
     },
     "lawfulBases": {
       "helperPosition": "above",
-      "label": "What lawful bases do they use?",
-      "helper": "",
+      "label": "<span class=\"number\">14</span>How does the organisation justify their use of data?",
+      "helper": "This information can sometimes be found under 'lawful bases'. The ICO <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/\" target=\"_blank\">has written explanations</a> of what these bases mean.",
       "fields": {
         "consent": {
           "label": "Consent",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
         "contract": {
           "label": "Contract",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
         "legalObligation": {
           "label": "Legal obligation",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
         "vitalInterests": {
           "label": "Vital interests",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
         "publicTask": {
           "label": "Public task",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
         "legitimateInterests": {
           "label": "Legitimate interests",
-          "type": "textarea"
+          "type": "textarea",
+          "placeholder": "Copy and paste information about this lawful basis here"
         },
-        "notes": {
-          "label": "Notes",
+        "observations": {
+          "label": "Observations",
           "type": "textarea"
         }
       }
     },
     "rights": {
       "helperPosition": "above",
-      "label": "How can you exercise your rights?",
+      "label": "<span class=\"number\">15</span>How can you exercise your rights?",
       "helper": "",
       "fields": {
         "general": {
           "label": "General",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }
@@ -567,7 +619,7 @@
         "access": {
           "label": "Right to access",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }
@@ -575,42 +627,42 @@
         "rectification": {
           "label": "Right to rectification",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }        },
         "erasure": {
           "label": "Right to erasure",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }        },
         "restrictProcessing": {
           "label": "Right to restrict processing",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }        },
         "dataPortability": {
           "label": "Right to data portability",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }        },
         "object": {
           "label": "Right to object",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }        },
         "automatedDecisionMaking": {
           "label": "Rights around automated decision making",
           "fields": {
-            "notes": {
+            "observations": {
               "type": "textarea"
             }
           }
@@ -618,7 +670,7 @@
       }
     },
     "unusualProcessingPurposes": {
-      "label": "Do they process data for unusual purposes?",
+      "label": "<span class=\"number\">16</span>Do any of their data processing activities seem unusual?",
       "fields": {
         "present": {
           "hideNone": true,
@@ -627,22 +679,16 @@
           ],
           "sort": false
         },
-        "notes": {
+        "observations": {
           "type": "textarea"
         }
       }
     },
-    "transparencyRecommendations": {
-      "label": "What is their privacy notice like?",
+    "presentation": {
+      "label": "<span class=\"number\">17</span>How is their privacy notice presented?",
       "fields": {
         "plainLanguage": {
           "label": "Was it written in plain language?",
-          "sort": false,
-          "optionLabels": [ "Yes", "No" ],
-          "hideNone": true
-        },
-        "definiteLanguage": {
-          "label": "Was it written in certain language?",
           "sort": false,
           "optionLabels": [ "Yes", "No" ],
           "hideNone": true
@@ -653,8 +699,8 @@
           "optionLabels": [ "Yes", "No" ],
           "hideNone": true
         },
-        "legibleDesign": {
-          "label": "Was the privacy notice easy to navigate?",
+        "easyToFindInside": {
+          "label": "Was it easy to find the information you wanted in the privacy notice?",
           "sort": false,
           "optionLabels": [ "Yes", "No" ],
           "hideNone": true
