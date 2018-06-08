@@ -333,7 +333,7 @@
     },
     "dataProcessingAddendum": {
       "helperPosition": "above",
-      "helper": "Organisations that send data outside the EEA may a data processing addendum to ensure data is adequately protected.",
+      "helper": "Organisations that send data outside the EEA may use a data processing addendum to ensure data is adequately protected.",
       "label": "<span class=\"number\">7</span>Does this organisation offer a data processing addendum?",
       "fields": {
         "present": {
