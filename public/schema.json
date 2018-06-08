@@ -600,7 +600,7 @@
         "specificity": {
           "$id": "/properties/automatedDecisionMaking/properties/specificity",
           "type": "string",
-          "title": "Do they refer to specific categories of data?",
+          "title": "Do they mention what automated decision making is used for?",
           "enum": [
             "specific", "general"
           ]
