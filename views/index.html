@@ -9,11 +9,11 @@
   <div class="columns small-12 large-6 large-offset-2">
     <h2>{{ settings.title }}</h2>
 
-    <p>Help us make privacy notices machine readable so they can be searched and reused by services like <a href="#" target="_blank">Open Data Rights</a>.</p>
+    <p>Help us make privacy notices machine readable so they can be searched and reused by services like <a href="https://opendatarights.projectsbyif.com" target="_blank">Open Data Rights</a>.</p>
 
     <p>It takes about 15 minutes to complete a submission using this form. Your browser will automatically save your progress.</p>
 
-    <p>When you're finished, you can submit your contribution to the <a href="#" target="_blank">Open Data Rights GitHub repository</a> or email it to us.</p>
+    <p>When you're finished, you can submit your contribution to the <a href="{{ settings.data_repository }}" target="_blank">Open Data Rights GitHub repository</a> or email it to us.</p>
 
     <p>All contributions are licensed under the <a href="https://opendatacommons.org/licenses/odbl/1.0/">Open Database Licence</a>.</p>
   </div>
@@ -33,7 +33,7 @@
     </div>
 
     <div class="required-fields-ok">
-      <p>Paste this JSON into a file called <span class="bold"><span class="contribute-filename"></span>.json</span> and submit it as a <a href="https://github.com/projectsbyif/open-data-rights-data/new/master" target="_blank">new pull request</a> in the Open Data Rights GitHub repository.</p>
+      <p>Paste this JSON into a file called <span class="bold"><span class="contribute-filename"></span>.json</span> and submit it as a <a href="{{ settings.data_repository }}new/master" target="_blank">new pull request</a> in the Open Data Rights GitHub repository.</p>
       <p>You can also email it to <a href="mailto:ian@projectsbyif.com" id="button-email">ian@projectsbyif.com</a>.</p>
     </div>
   </div>
