@@ -18,6 +18,7 @@ a {
 
   a {
     text-decoration: none;
+    color: #CCC;
   }
 
   .number {
@@ -26,6 +27,10 @@ a {
     display: inline-block;
     color: #999;
   }
+}
+
+[data-alpaca-field-name="organisationInformation"] legend a {
+  color: #212121;
 }
 
 .alpaca-form > div > div > div {
@@ -45,13 +50,13 @@ a {
   padding-left: 0px;
 }
 
-
 /* Hide non-top level legends */
 .alpaca-form > div > div > div > div > div > div > div > legend {
   display: none;
   font-size: 0.9rem;
   font-weight: normal;
   margin-bottom: 0;
+  color: #212121;
 }
 
 .alpaca-field,
@@ -136,10 +141,6 @@ a {
   .alpaca-container-item {
     padding-left: 0;
   }
-}
-
-[data-alpaca-container-item-name="privacyShield"] {
-  display: none;
 }
 
 .form-custom-button {

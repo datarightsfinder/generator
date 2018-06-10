@@ -347,443 +347,6 @@
         }
       }
     },
-    "dataProtectionRegister": {
-      "$id": "/properties/dataProtectionRegister",
-      "type": "object",
-      "properties": {
-        "present": {
-          "$id": "/properties/dataProtectionRegister/properties/present",
-          "type": "string",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "identifier": {
-          "$id": "/properties/dataProtectionRegister/properties/identifier",
-          "type": "string",
-          "title": "Identifier",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        },
-        "url": {
-          "$id": "/properties/dataProtectionRegister/properties/url",
-          "type": "string",
-          "title": "URL",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        }
-      }
-    },
-    "privacyShield": {
-      "$id": "/properties/privacyShield",
-      "type": "object",
-      "helperPosition": "above",
-      "properties": {
-        "present": {
-          "$id": "/properties/privacyShield/properties/present",
-          "type": "string",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "url": {
-          "$id": "/properties/privacyShield/properties/url",
-          "type": "string",
-          "title": "US–EU Privacy Shield certificate URL"
-        }
-      }
-    },
-    "dataProcessingAddendum": {
-      "$id": "/properties/dataProcessingAddendum",
-      "type": "object",
-      "properties": {
-        "present": {
-          "$id": "/properties/dataProcessingAddendum/properties/present",
-          "type": "string",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "type": {
-          "$id": "/properties/dataProcessingAddendum/properties/type",
-          "type": "string",
-          "title": "How do users enter into a data processing addendum?",
-          "enum": [ "form", "setting", "assumed" ]
-        },
-        "url": {
-          "$id": "/properties/dataProcessingAddendum/properties/url",
-          "type": "string",
-          "title": "URL",
-          "default": ""
-        },
-        "observations": {
-          "$id": "/properties/dataProcessingAddendum/properties/observations",
-          "type": "string",
-          "title": "Observations"
-        },
-        "sourceText": {
-          "$id": "/properties/dataProcessingAddendum/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste data processing addendum information from privacy policy"
-        }
-      }
-    },
-    "thirdParties": {
-      "$id": "/properties/thirdParties",
-      "type": "object",
-      "properties": {
-        "isMissing": {
-          "$id": "/properties/thirdParties/properties/isMissing",
-          "type": "boolean"
-        },
-        "list": {
-          "$id": "/properties/thirdParties/properties/list",
-          "type": "array",
-          "items": {
-            "$id": "/properties/thirdParties/properties/list/items",
-            "type": "string"
-          }
-        },
-        "specificity": {
-          "$id": "/properties/thirdParties/properties/specificity",
-          "type": "string",
-          "title": "Specificity",
-          "enum": [
-            "specific", "general"
-          ]
-        },
-        "observations": {
-          "$id": "/properties/thirdParties/properties/observations",
-          "type": "string",
-          "title": "Observations",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        },
-        "sourceText": {
-          "$id": "/properties/thirdParties/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste third parties section from privacy notice",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        }
-      }
-    },
-    "retentionRules": {
-      "$id": "/properties/retentionRules",
-      "type": "object",
-      "properties": {
-        "isMissing": {
-          "$id": "/properties/retentionRules/properties/isMissing",
-          "type": "boolean"
-        },
-        "summary": {
-          "$id": "/properties/retentionRules/properties/summary",
-          "type": "string",
-          "title": "Summary"
-        },
-        "observations": {
-          "$id": "/properties/retentionRules/properties/observations",
-          "type": "string",
-          "title": "Observations"
-        },
-        "specificityCategory": {
-          "$id": "/properties/retentionRules/properties/specificityCategory",
-          "type": "string",
-          "title": "Do they refer to specific categories of data?",
-          "enum": [
-            "specific", "general"
-          ]
-        },
-        "specificityTime": {
-          "$id": "/properties/retentionRules/properties/specificityTime",
-          "type": "string",
-          "title": "Do they mention specific time periods?",
-          "enum": [
-            "specific", "general"
-          ]
-        },
-        "sourceText": {
-          "$id": "/properties/retentionRules/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste retention rules from privacy policy"
-        }
-      }
-    },
-    "dataCategoriesCollected": {
-      "$id": "/properties/dataCategoriesCollected",
-      "type": "object",
-      "properties": {
-        "isMissing": {
-          "$id": "/properties/dataCategoriesCollected/properties/isMissing",
-          "type": "boolean"
-        },
-        "list": {
-          "$id": "/properties/dataCategoriesCollected/properties/list",
-          "type": "array",
-          "title": "List",
-          "items": {
-            "$id": "/properties/dataCategoriesCollected/properties/list/items",
-            "type": "string",
-            "title": "",
-            "enum": [
-              "bank_account_details",
-              "bank_transactions",
-              "biometrics",
-              "communications",
-              "credit_history",
-              "criminal_records",
-              "date_of_birth",
-              "device_information",
-              "education",
-              "email_address",
-              "employment",
-              "ethnic_origin",
-              "gender",
-              "genetics",
-              "identity_documents",
-              "income",
-              "location",
-              "health",
-              "names",
-              "online_activity",
-              "passwords",
-              "personal_preferences",
-              "politics",
-              "postal_address",
-              "race",
-              "religion",
-              "sex_life",
-              "sexual_orientation",
-              "social_network_details",
-              "social_security_number",
-              "telephone_number",
-              "trade_union_membership"
-            ]
-          }
-        },
-        "observations": {
-          "$id": "/properties/dataCategoriesCollected/properties/observations",
-          "type": "string",
-          "title": "Observations"
-        },
-        "sourceText": {
-          "$id": "/properties/dataCategoriesCollected/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste data categories information from privacy notice"
-        }
-      }
-    },
-    "automatedDecisionMaking": {
-      "$id": "/properties/automatedDecisionMaking",
-      "type": "object",
-      "properties": {
-        "usesAutomatedDecisionMaking": {
-          "$id": "/properties/automatedDecisionMaking/properties/usesAutomatedDecisionMaking",
-          "type": "string",
-          "enum": [
-            "unknown", "present", "not_present"
-          ]
-        },
-        "observations": {
-          "$id": "/properties/automatedDecisionMaking/properties/observations",
-          "type": "string",
-          "title": "Observations"
-        },
-        "specificity": {
-          "$id": "/properties/automatedDecisionMaking/properties/specificity",
-          "type": "string",
-          "title": "Do they mention what automated decision making is used for?",
-          "enum": [
-            "specific", "general"
-          ]
-        },
-        "sourceText": {
-          "$id": "/properties/automatedDecisionMaking/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste automated decision making information from privacy notice"
-        }
-      }
-    },
-    "complaintInformation": {
-      "$id": "/properties/complaintInformation",
-      "type": "object",
-      "properties": {
-        "present": {
-          "$id": "/properties/complaintInformation/properties/present",
-          "type": "string",
-          "title": "",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "observations": {
-          "$id": "/properties/complaintInformation/properties/observations",
-          "type": "string",
-          "title": "Observations"
-        },
-        "specificity": {
-          "$id": "/properties/complaintInformation/properties/specificity",
-          "type": "string",
-          "title": "Does the privacy policy contain contact details for a data protection authority?",
-          "enum": [
-            "specific", "general"
-          ]
-        },
-        "sourceText": {
-          "$id": "/properties/complaintInformation/properties/sourceText",
-          "type": "string",
-          "title": "Copy and paste complaints information from privacy notice"
-        }
-      }
-    },
-    "securityStandards": {
-      "$id": "/properties/securityStandards",
-      "type": "object",
-      "properties": {
-        "present": {
-          "$id": "/properties/securityStandards/properties/present",
-          "type": "string",
-          "title": "",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "url": {
-          "$id": "/properties/securityStandards/properties/url",
-          "type": "string",
-          "title": "Security information URL",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        },
-        "observations": {
-          "$id": "/properties/securityStandards/properties/observations",
-          "type": "string",
-          "title": "Observations",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        },
-        "specificity": {
-          "$id": "/properties/securityStandards/properties/specificity",
-          "type": "string",
-          "title": "Do they specify methods of how they secure data?",
-          "enum": [
-            "specific", "general"
-          ]
-        }
-      }
-    },
-    "lawfulBases": {
-      "$id": "/properties/lawfulBases",
-      "type": "object",
-      "properties": {
-        "isMissing": {
-          "$id": "/properties/lawfulBases/properties/isMissing",
-          "type": "boolean"
-        },
-        "consent": {
-          "$id": "/properties/lawfulBases/properties/consent",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/consent/properties/observations",
-              "type": "string",
-              "title": "Observations",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
-        },
-        "contract": {
-          "$id": "/properties/lawfulBases/properties/contract",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/contract/properties/observations",
-              "type": "string",
-              "title": "Observations",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
-        },
-        "legalObligation": {
-          "$id": "/properties/lawfulBases/properties/legalObligation",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/legalObligation/properties/observations",
-              "type": "string",
-              "title": "Observations",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
-        },
-        "vitalInterests": {
-          "$id": "/properties/lawfulBases/properties/vitalInterests",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/vitalInterests/properties/observations",
-              "type": "string",
-              "title": "Observations",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
-        },
-        "publicTask": {
-          "$id": "/properties/lawfulBases/properties/publicTask",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/publicTask/properties/observations",
-              "type": "string",
-              "title": "Observations"
-            }
-          }
-        },
-        "legitimateInterests": {
-          "$id": "/properties/lawfulBases/properties/legitimateInterests",
-          "type": "object",
-          "properties": {
-            "observations": {
-              "$id": "/properties/lawfulBases/properties/legitimateInterests/properties/observations",
-              "type": "string",
-              "title": "Observations",
-              "default": "",
-              "examples": [
-                ""
-              ]
-            }
-          }
-        },
-        "observations": {
-          "$id": "/properties/lawfulBases/properties/observations",
-          "type": "string"
-        }
-      }
-    },
     "rights": {
       "$id": "/properties/rights",
       "type": "object",
@@ -1250,6 +813,70 @@
         }
       }
     },
+    "dataCategoriesCollected": {
+      "$id": "/properties/dataCategoriesCollected",
+      "type": "object",
+      "properties": {
+        "isMissing": {
+          "$id": "/properties/dataCategoriesCollected/properties/isMissing",
+          "type": "boolean"
+        },
+        "list": {
+          "$id": "/properties/dataCategoriesCollected/properties/list",
+          "type": "array",
+          "title": "List",
+          "items": {
+            "$id": "/properties/dataCategoriesCollected/properties/list/items",
+            "type": "string",
+            "title": "",
+            "enum": [
+              "bank_account_details",
+              "bank_transactions",
+              "biometrics",
+              "communications",
+              "credit_history",
+              "criminal_records",
+              "date_of_birth",
+              "device_information",
+              "education",
+              "email_address",
+              "employment",
+              "ethnic_origin",
+              "gender",
+              "genetics",
+              "identity_documents",
+              "income",
+              "location",
+              "health",
+              "names",
+              "online_activity",
+              "passwords",
+              "personal_preferences",
+              "politics",
+              "postal_address",
+              "race",
+              "religion",
+              "sex_life",
+              "sexual_orientation",
+              "social_network_details",
+              "social_security_number",
+              "telephone_number",
+              "trade_union_membership"
+            ]
+          }
+        },
+        "observations": {
+          "$id": "/properties/dataCategoriesCollected/properties/observations",
+          "type": "string",
+          "title": "Observations"
+        },
+        "sourceText": {
+          "$id": "/properties/dataCategoriesCollected/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste data categories information from privacy notice"
+        }
+      }
+    },
     "unusualProcessingPurposes": {
       "$id": "/properties/unusualProcessingPurposes",
       "type": "object",
@@ -1266,6 +893,379 @@
           "$id": "/properties/unusualProcessingPurposes/properties/observations",
           "type": "string",
           "title": "Observations"
+        }
+      }
+    },
+    "thirdParties": {
+      "$id": "/properties/thirdParties",
+      "type": "object",
+      "properties": {
+        "isMissing": {
+          "$id": "/properties/thirdParties/properties/isMissing",
+          "type": "boolean"
+        },
+        "list": {
+          "$id": "/properties/thirdParties/properties/list",
+          "type": "array",
+          "items": {
+            "$id": "/properties/thirdParties/properties/list/items",
+            "type": "string"
+          }
+        },
+        "specificity": {
+          "$id": "/properties/thirdParties/properties/specificity",
+          "type": "string",
+          "title": "Specificity",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "observations": {
+          "$id": "/properties/thirdParties/properties/observations",
+          "type": "string",
+          "title": "Observations",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/thirdParties/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste third parties section from privacy notice",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        }
+      }
+    },
+    "retentionRules": {
+      "$id": "/properties/retentionRules",
+      "type": "object",
+      "properties": {
+        "isMissing": {
+          "$id": "/properties/retentionRules/properties/isMissing",
+          "type": "boolean"
+        },
+        "summary": {
+          "$id": "/properties/retentionRules/properties/summary",
+          "type": "string",
+          "title": "Summary"
+        },
+        "observations": {
+          "$id": "/properties/retentionRules/properties/observations",
+          "type": "string",
+          "title": "Observations"
+        },
+        "specificityCategory": {
+          "$id": "/properties/retentionRules/properties/specificityCategory",
+          "type": "string",
+          "title": "Do they refer to specific categories of data?",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "specificityTime": {
+          "$id": "/properties/retentionRules/properties/specificityTime",
+          "type": "string",
+          "title": "Do they mention specific time periods?",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/retentionRules/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste retention rules from privacy policy"
+        }
+      }
+    },
+    "lawfulBases": {
+      "$id": "/properties/lawfulBases",
+      "type": "object",
+      "properties": {
+        "isMissing": {
+          "$id": "/properties/lawfulBases/properties/isMissing",
+          "type": "boolean"
+        },
+        "consent": {
+          "$id": "/properties/lawfulBases/properties/consent",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/consent/properties/observations",
+              "type": "string",
+              "title": "Observations",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            }
+          }
+        },
+        "contract": {
+          "$id": "/properties/lawfulBases/properties/contract",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/contract/properties/observations",
+              "type": "string",
+              "title": "Observations",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            }
+          }
+        },
+        "legalObligation": {
+          "$id": "/properties/lawfulBases/properties/legalObligation",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/legalObligation/properties/observations",
+              "type": "string",
+              "title": "Observations",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            }
+          }
+        },
+        "vitalInterests": {
+          "$id": "/properties/lawfulBases/properties/vitalInterests",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/vitalInterests/properties/observations",
+              "type": "string",
+              "title": "Observations",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            }
+          }
+        },
+        "publicTask": {
+          "$id": "/properties/lawfulBases/properties/publicTask",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/publicTask/properties/observations",
+              "type": "string",
+              "title": "Observations"
+            }
+          }
+        },
+        "legitimateInterests": {
+          "$id": "/properties/lawfulBases/properties/legitimateInterests",
+          "type": "object",
+          "properties": {
+            "observations": {
+              "$id": "/properties/lawfulBases/properties/legitimateInterests/properties/observations",
+              "type": "string",
+              "title": "Observations",
+              "default": "",
+              "examples": [
+                ""
+              ]
+            }
+          }
+        },
+        "observations": {
+          "$id": "/properties/lawfulBases/properties/observations",
+          "type": "string"
+        }
+      }
+    },
+    "securityStandards": {
+      "$id": "/properties/securityStandards",
+      "type": "object",
+      "properties": {
+        "present": {
+          "$id": "/properties/securityStandards/properties/present",
+          "type": "string",
+          "title": "",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "url": {
+          "$id": "/properties/securityStandards/properties/url",
+          "type": "string",
+          "title": "Security information URL",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "observations": {
+          "$id": "/properties/securityStandards/properties/observations",
+          "type": "string",
+          "title": "Observations",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "specificity": {
+          "$id": "/properties/securityStandards/properties/specificity",
+          "type": "string",
+          "title": "Do they specify methods of how they secure data?",
+          "enum": [
+            "specific", "general"
+          ]
+        }
+      }
+    },
+    "dataProcessingAddendum": {
+      "$id": "/properties/dataProcessingAddendum",
+      "type": "object",
+      "properties": {
+        "present": {
+          "$id": "/properties/dataProcessingAddendum/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "type": {
+          "$id": "/properties/dataProcessingAddendum/properties/type",
+          "type": "string",
+          "title": "How do users enter into a data processing addendum?",
+          "enum": [ "form", "setting", "assumed" ]
+        },
+        "url": {
+          "$id": "/properties/dataProcessingAddendum/properties/url",
+          "type": "string",
+          "title": "URL",
+          "default": ""
+        },
+        "observations": {
+          "$id": "/properties/dataProcessingAddendum/properties/observations",
+          "type": "string",
+          "title": "Observations"
+        },
+        "sourceText": {
+          "$id": "/properties/dataProcessingAddendum/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste data processing addendum information from privacy policy"
+        }
+      }
+    },
+    "privacyShield": {
+      "$id": "/properties/privacyShield",
+      "type": "object",
+      "helperPosition": "above",
+      "properties": {
+        "present": {
+          "$id": "/properties/privacyShield/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "url": {
+          "$id": "/properties/privacyShield/properties/url",
+          "type": "string",
+          "title": "US–EU Privacy Shield certificate URL"
+        }
+      }
+    },
+    "dataProtectionRegister": {
+      "$id": "/properties/dataProtectionRegister",
+      "type": "object",
+      "properties": {
+        "present": {
+          "$id": "/properties/dataProtectionRegister/properties/present",
+          "type": "string",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "identifier": {
+          "$id": "/properties/dataProtectionRegister/properties/identifier",
+          "type": "string",
+          "title": "Identifier",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "url": {
+          "$id": "/properties/dataProtectionRegister/properties/url",
+          "type": "string",
+          "title": "URL",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        }
+      }
+    },
+    "automatedDecisionMaking": {
+      "$id": "/properties/automatedDecisionMaking",
+      "type": "object",
+      "properties": {
+        "usesAutomatedDecisionMaking": {
+          "$id": "/properties/automatedDecisionMaking/properties/usesAutomatedDecisionMaking",
+          "type": "string",
+          "enum": [
+            "unknown", "present", "not_present"
+          ]
+        },
+        "observations": {
+          "$id": "/properties/automatedDecisionMaking/properties/observations",
+          "type": "string",
+          "title": "Observations"
+        },
+        "specificity": {
+          "$id": "/properties/automatedDecisionMaking/properties/specificity",
+          "type": "string",
+          "title": "Do they mention what automated decision making is used for?",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/automatedDecisionMaking/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste automated decision making information from privacy notice"
+        }
+      }
+    },
+    "complaintInformation": {
+      "$id": "/properties/complaintInformation",
+      "type": "object",
+      "properties": {
+        "present": {
+          "$id": "/properties/complaintInformation/properties/present",
+          "type": "string",
+          "title": "",
+          "enum": [
+            "present", "not_present"
+          ]
+        },
+        "observations": {
+          "$id": "/properties/complaintInformation/properties/observations",
+          "type": "string",
+          "title": "Observations"
+        },
+        "specificity": {
+          "$id": "/properties/complaintInformation/properties/specificity",
+          "type": "string",
+          "title": "Does the privacy policy contain contact details for a data protection authority?",
+          "enum": [
+            "specific", "general"
+          ]
+        },
+        "sourceText": {
+          "$id": "/properties/complaintInformation/properties/sourceText",
+          "type": "string",
+          "title": "Copy and paste complaints information from privacy notice"
         }
       }
     },

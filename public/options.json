@@ -2,8 +2,8 @@
   "fields": {
     "organisationInformation": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">1</span>About the organisation (required)",
-      "helper": "Start by entering some basic details about the organisation. You can look up registration numbers and countries on <a href=\"https://opencorporates.com/\" target=\"_blank\">OpenCorporates</a>.",
+      "label": "<span class=\"number\">1</span>About the organisation",
+      "helper": "<span class=\"bold\">These fields are required.</span> Start by entering these details about the organisation. You can look up registration numbers and countries on <a href=\"https://opencorporates.com/\" target=\"_blank\">OpenCorporates</a>.",
       "fields": {
         "registrationCountry": {
           "noneLabel": " ",
@@ -303,7 +303,7 @@
     },
     "dataProtectionRegister": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">5</span>Is the organisation in a data protection register?",
+      "label": "<span class=\"number\">14</span>Is the organisation in a data protection register?",
       "helper": "Find the details of this organisation in a national data processors register, like the <a href=\"https://ico.org.uk/about-the-ico/what-we-do/register-of-fee-payers/\" target=\"_blank\">ICO register of fee payers</a>. Some countries may not have one.",
       "fields": {
         "present": {
@@ -319,7 +319,7 @@
     "privacyShield": {
       "helperPosition": "above",
       "helper": "The <a href=\"https://www.privacyshield.gov/welcome\" target=\")blank\">Privacy Shield website</a> has a searchable list of organisations in this scheme.",
-      "label": "<span class=\"number\">6</span>Is this organisation part of the US-EU Privacy Shield Framework?",
+      "label": "<span class=\"number\">13</span>Is this organisation part of the US-EU Privacy Shield Framework?",
       "fields": {
         "present": {
           "type": "radio",
@@ -334,7 +334,7 @@
     "dataProcessingAddendum": {
       "helperPosition": "above",
       "helper": "Organisations that send data outside the EEA may use a data processing addendum to ensure data is adequately protected.",
-      "label": "<span class=\"number\">7</span>Does this organisation offer a data processing addendum?",
+      "label": "<span class=\"number\">12</span>Does this organisation offer a data processing addendum?",
       "fields": {
         "present": {
           "type": "radio",
@@ -433,7 +433,7 @@
     },
     "dataCategoriesCollected": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">10</span>What categories of data do they collect?",
+      "label": "<span class=\"number\">6</span>What categories of data do they collect?",
       "helper": "",
       "fields": {
         "list": {
@@ -483,7 +483,7 @@
     },
     "automatedDecisionMaking": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">11</span>Do they use automated decision making?",
+      "label": "<span class=\"number\">15</span>Do they use automated decision making?",
       "helper": "",
       "fields": {
         "usesAutomatedDecisionMaking": {
@@ -511,7 +511,7 @@
     },
     "complaintInformation": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">12</span>Do they have information on how to make a complaint?",
+      "label": "<span class=\"number\">16</span>Do they have information on how to make a complaint?",
       "helper": "",
       "fields": {
         "present": {
@@ -539,7 +539,7 @@
     },
     "securityStandards": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">13</span>Do they have information about how they secure data?",
+      "label": "<span class=\"number\">11</span>Do they have information about how they secure data?",
       "helper": "",
       "fields": {
         "present": {
@@ -564,7 +564,7 @@
     },
     "lawfulBases": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">14</span>How does the organisation justify their use of data?",
+      "label": "<span class=\"number\">10</span>How does the organisation justify their use of data?",
       "helper": "This information can sometimes be found under 'lawful bases'. The ICO <a href=\"https://ico.org.uk/for-organisations/guide-to-the-general-data-protection-regulation-gdpr/lawful-basis-for-processing/\" target=\"_blank\">has written explanations</a> of what these bases mean.",
       "fields": {
         "consent": {
@@ -605,7 +605,7 @@
     },
     "rights": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">15</span>How can you exercise your rights?",
+      "label": "<span class=\"number\">5</span>How can you exercise your rights?",
       "helper": "",
       "fields": {
         "general": {
@@ -670,7 +670,7 @@
       }
     },
     "unusualProcessingPurposes": {
-      "label": "<span class=\"number\">16</span>Do any of their data processing activities seem unusual?",
+      "label": "<span class=\"number\">7</span>Do any of their data processing activities seem unusual?",
       "fields": {
         "present": {
           "hideNone": true,

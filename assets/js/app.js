@@ -14,6 +14,20 @@ $(function() {
   $("body").on("click", "legend", function(e) {
     e.preventDefault();
 
+    if (
+      $("input[name=organisationInformation_name]").val() === "" ||
+      $("input[name=organisationInformation_number]").val() === "" || $("select[name=organisationInformation_registrationCountry]").val() === ""
+    ) {
+      return;
+    }
+
+    var selectedCountry = $('select[name="organisationInformation_registrationCountry"]').val();
+    selectedCountry = selectedCountry.split('_')[0].toLowerCase();
+
+    if (selectedCountry !== 'us' && $(this).parent().attr('data-alpaca-field-name') === 'privacyShield') {
+      return;
+    }
+
     var container = $(this).parent().parent();
 
     if (container.attr("data-open") === "true") {
@@ -320,7 +334,7 @@ $(function() {
       .show();
 
     $('[data-alpaca-container-item-name="organisationInformation"]')
-      .attr("data-open", "true")
+      .attr("data-open", "true");
   }
 
   function saveLocalStorage() {
@@ -339,13 +353,6 @@ $(function() {
   }
 
   function refreshContributeForm() {
-    var selectedCountry = $('select[name="organisationInformation_registrationCountry"]').val();
-    selectedCountry = selectedCountry.split('_')[0].toLowerCase();
-
-    if (selectedCountry === 'us') {
-      $('[data-alpaca-container-item-name="privacyShield"]').show();
-    }
-
     // Use .number as an easy way of selecting each form group
     $(".number").each(function(i, e) {
       var inputs = $(this).parent().parent().parent().parent().find('input');
@@ -399,6 +406,14 @@ $(function() {
     } else {
       $('.required-fields-ok').show();
       $('.required-fields-not-ok').hide();
+      $('legend a').css({'color':'#212121'});
+    }
+
+    var selectedCountry = $('select[name="organisationInformation_registrationCountry"]').val();
+    selectedCountry = selectedCountry.split('_')[0].toLowerCase();
+
+    if (selectedCountry !== 'us') {
+      $('[data-alpaca-container-item-name="privacyShield"] legend a').attr('style', '');
     }
 
     // Get JSON from form
