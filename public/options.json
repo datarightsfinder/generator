@@ -319,7 +319,7 @@
     "privacyShield": {
       "helperPosition": "above",
       "helper": "The <a href=\"https://www.privacyshield.gov/welcome\" target=\")blank\">Privacy Shield website</a> has a searchable list of organisations in this scheme.",
-      "label": "<span class=\"number\">13</span>Is this organisation part of the US-EU Privacy Shield Framework?",
+      "label": "<span class=\"number\">13</span>Is this organisation part of the EU-US Privacy Shield Framework?",
       "fields": {
         "present": {
           "type": "radio",
