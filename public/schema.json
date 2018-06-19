@@ -275,6 +275,11 @@
             "zm",
             "zw"
           ]
+        },
+        "description": {
+          "$id": "/properties/organisationInformation/properties/description",
+          "type": "string",
+          "title": "Description"
         }
       }
     },
@@ -842,6 +847,7 @@
               "email_address",
               "employment",
               "ethnic_origin",
+              "family",
               "gender",
               "genetics",
               "identity_documents",
@@ -851,10 +857,10 @@
               "names",
               "online_activity",
               "passwords",
+              "personal_appearance",
               "personal_preferences",
               "politics",
               "postal_address",
-              "race",
               "religion",
               "sex_life",
               "sexual_orientation",
@@ -886,7 +892,7 @@
           "type": "string",
           "title": "",
           "enum": [
-            "present", "not_present"
+            "present", "unclear", "not_present"
           ]
         },
         "observations": {

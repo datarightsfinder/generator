@@ -304,7 +304,7 @@
     "dataProtectionRegister": {
       "helperPosition": "above",
       "label": "<span class=\"number\">14</span>Is the organisation in a data protection register?",
-      "helper": "Find the details of this organisation in a national data processors register, like the <a href=\"https://ico.org.uk/about-the-ico/what-we-do/register-of-fee-payers/\" target=\"_blank\">ICO register of fee payers</a>. Some countries may not have one.",
+      "helper": "Find the details of this organisation in a national data processors register. Some countries may not have one. The UK register from the ICO isn't available yet.",
       "fields": {
         "present": {
           "type": "radio",
@@ -451,6 +451,7 @@
             "Email address",
             "Employment",
             "Ethnic origin",
+            "Family",
             "Gender",
             "Genetics",
             "Identity documents",
@@ -460,10 +461,10 @@
             "Names",
             "Online activity",
             "Passwords",
+            "Personal appearance",
             "Personal preferences",
             "Politics",
             "Postal address",
-            "Race",
             "Religion",
             "Sex life",
             "Sexual orientation",
@@ -675,7 +676,7 @@
         "present": {
           "hideNone": true,
           "optionLabels": [
-            "Yes", "No"
+            "Yes", "Can't find any", "No"
           ],
           "sort": false
         },
