@@ -887,12 +887,16 @@
       "$id": "/properties/unusualProcessingPurposes",
       "type": "object",
       "properties": {
+        "isMissing": {
+          "$id": "/properties/unusualProcessingPurposes/properties/isMissing",
+          "type": "boolean"
+        },
         "present": {
           "$id": "/properties/unusualProcessingPurposes/properties/present",
           "type": "string",
           "title": "",
           "enum": [
-            "present", "unclear", "not_present"
+            "present", "not_present"
           ]
         },
         "observations": {
