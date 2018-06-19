@@ -1,5 +1,5 @@
 {
-  "name": "rightsbase-generator",
+  "name": "open-data-rights-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,8 +19,8 @@
     "pump": "^3.0.0",
     "yamljs": "^0.3.0"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Projects By IF / Open Rights Group",
+  "license": "MIT",
   "engines": {
     "node": "8.9.4",
     "npm": "6.0.0"
