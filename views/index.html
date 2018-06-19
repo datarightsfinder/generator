@@ -9,11 +9,11 @@
   <div class="columns small-12 large-6 large-offset-2">
     <h2>{{ settings.title }}</h2>
 
-    <p>Help us make privacy notices machine readable so they can be searched and reused by services like <a href="https://opendatarights.projectsbyif.com" target="_blank">Open Data Rights</a>.</p>
+    <p>Help <a href="https://openrightsgroup.org" target="_blank">Open Rights Group</a> and <a href="https://projectsbyif.com" target="_blank">IF</a> make privacy notices machine readable so they can be searched and reused by services like <a href="https://opendatarights.projectsbyif.com" target="_blank">Open Data Rights</a>.</p>
 
     <p>It takes about 15 minutes to complete a submission using this form. Your browser will automatically save your progress.</p>
 
-    <p>When you're finished, you can submit your contribution to the <a href="{{ settings.data_repository }}" target="_blank">Open Data Rights GitHub repository</a> or email it to us.</p>
+    <p>When you're finished, you can submit your contribution to the <a href="{{ settings.data_repository }}" target="_blank">Open Data Rights GitHub repository</a> or <a href="mailto:{{ settings.email_address }}">email it to us</a>.</p>
 
     <p>All contributions are licensed under the <a href="https://opendatacommons.org/licenses/odbl/1.0/">Open Database Licence</a>.</p>
   </div>
@@ -33,15 +33,16 @@
     </div>
 
     <div class="required-fields-ok">
-      <p>Paste this JSON into a file called <span class="bold"><span class="contribute-filename"></span>.json</span> and submit it as a <a href="{{ settings.data_repository }}new/master" target="_blank">new pull request</a> in the Open Data Rights GitHub repository.</p>
-      <p>You can also email it to <a href="mailto:ian@projectsbyif.com" id="button-email">ian@projectsbyif.com</a>.</p>
+      <p><a href="#" class="copy-to-clipboard">Copy this JSON to your clipboard</a> and paste it into a file called <span class="bold"><span class="contribute-filename"></span>.json</span>.</p>
+      <p>Submit it as a <a href="{{ settings.data_repository }}new/master" target="_blank">new pull request</a> in the Open Data Rights GitHub repository.</p>
+      <p>You can also email it to <a href="mailto:{{ settings.email_address }}" id="button-email">{{ settings.email_address }}</a>.</p>
     </div>
   </div>
 </div>
 
 <div class="row">
   <div class="columns small-12 large-8 large-offset-2">
-    <p><a href="#" id="buttonStartAgain">Add another organisation</a></p>
+    <p><a href="#" id="buttonStartAgain">Clear this form</a></p>
   </div>
 </div>
 {% endblock %}

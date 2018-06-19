@@ -431,4 +431,11 @@ $(function() {
 
     $(".contribute-filename").text(proposedFilename);
   }
+
+  $('.copy-to-clipboard').click(function(e) {
+    e.preventDefault();
+
+    $(".generated-json").select();
+    document.execCommand('copy');
+  });
 });
