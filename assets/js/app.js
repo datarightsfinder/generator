@@ -323,10 +323,18 @@ $(function() {
 
     e.preventDefault();
 
+    var container = $(this).parent().parent().parent().parent().parent().parent();
+
+    container.css({
+      'height': container.outerHeight() - 50
+    });
+
     setTimeout(function() {
       createTextboxArrayForms();
       saveLocalStorage();
       refreshContributeForm();
+
+      container.attr('style', '');
     }, 200);
   });
 
