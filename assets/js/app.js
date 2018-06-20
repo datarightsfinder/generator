@@ -297,14 +297,21 @@ $(function() {
       var value = $(this).val();
       var cachedParent = $(this).parent().parent();
       var cachedId = $(this).attr("id");
+      var container = $(this).parent().parent().parent().parent();
 
       $(this).parent().find(".alpaca-array-toolbar-action").trigger("click");
+
+      container.css({
+        'height': container.outerHeight()
+      });
 
       setTimeout(function() {
         cachedParent.find("input.alpaca-control").last().val(value);
         refreshContributeForm();
         saveLocalStorage();
         createTextboxArrayForms();
+
+        container.attr('style', '');
 
         $('#' + cachedId).focus();
       }, 200);
