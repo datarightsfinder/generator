@@ -347,7 +347,7 @@ $(function() {
 
   function showFirstField() {
     $('[data-alpaca-container-item-name="organisationInformation"]')
-      .find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-right, .form-custom-button")
+      .find("*")
       .show();
 
     $('[data-alpaca-container-item-name="organisationInformation"]')
