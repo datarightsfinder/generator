@@ -839,6 +839,7 @@
               "bank_transactions",
               "biometrics",
               "communications",
+              "contact_list",
               "credit_history",
               "criminal_records",
               "date_of_birth",
