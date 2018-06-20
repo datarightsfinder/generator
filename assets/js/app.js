@@ -41,6 +41,8 @@ $(function() {
       container.attr("data-open", "true");
 
       $(this).parent().find(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-left, .pull-right, legend").show();
+      $(this).parent().find('div').show();
+
       $(this).parent().find('.form-custom-button').css({"display":"inline-block"});
     }
   });
@@ -166,7 +168,7 @@ $(function() {
       form.setValue(payload);
 
       // Hide all fields
-      $(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-right, .form-custom-button").hide();
+      $(".form-group, .alpaca-array-toolbar, .alpaca-helper, .alpaca-array-actionbar, .pull-right, .form-custom-button, #mainForm div div div div div").hide();
 
       // Show first field
       showFirstField();
