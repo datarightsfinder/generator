@@ -856,6 +856,7 @@
               "location",
               "health",
               "names",
+              "nationality",
               "online_activity",
               "passwords",
               "personal_appearance",
