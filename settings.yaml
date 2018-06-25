@@ -1,7 +1,7 @@
 # About
 title: JSON generator for privacy notices
 description: Help turn privacy policies into structured data
-url: https://rightsbase.projectsbyif.com
+url: https://generator.projectsbyif.com
 
 # Images
 favicon: https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/favicon.png
@@ -15,5 +15,5 @@ twitter_card_image: https://s3-eu-west-1.amazonaws.com/projectsbyif.com/shared/f
 twitter_card_handle: @projectsbyif
 
 # Config
-data_repository: https://github.com/projectsbyif/open-data-rights-data/
-email_address: ian@projectsbyif.com
+data_repository: https://github.com/datarightsfinder/data/
+email_address: contact@datarightsfinder.org
