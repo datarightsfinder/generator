@@ -1187,37 +1187,6 @@
         }
       }
     },
-    "dataProtectionRegister": {
-      "$id": "/properties/dataProtectionRegister",
-      "type": "object",
-      "properties": {
-        "present": {
-          "$id": "/properties/dataProtectionRegister/properties/present",
-          "type": "string",
-          "enum": [
-            "present", "not_present"
-          ]
-        },
-        "identifier": {
-          "$id": "/properties/dataProtectionRegister/properties/identifier",
-          "type": "string",
-          "title": "Identifier",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        },
-        "url": {
-          "$id": "/properties/dataProtectionRegister/properties/url",
-          "type": "string",
-          "title": "URL",
-          "default": "",
-          "examples": [
-            ""
-          ]
-        }
-      }
-    },
     "automatedDecisionMaking": {
       "$id": "/properties/automatedDecisionMaking",
       "type": "object",

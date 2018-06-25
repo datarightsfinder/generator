@@ -301,21 +301,6 @@
         }
       }
     },
-    "dataProtectionRegister": {
-      "helperPosition": "above",
-      "label": "<span class=\"number\">14</span>Is the organisation in a data protection register?",
-      "helper": "Find the details of this organisation in a national data processors register. Some countries may not have one. The UK register from the ICO isn't available yet.",
-      "fields": {
-        "present": {
-          "type": "radio",
-          "optionLabels": [
-            "Yes", "No"
-          ],
-          "sort": false,
-          "hideNone": true
-        }
-      }
-    },
     "privacyShield": {
       "helperPosition": "above",
       "helper": "The <a href=\"https://www.privacyshield.gov/welcome\" target=\")blank\">Privacy Shield website</a> has a searchable list of organisations in this scheme.",
@@ -486,7 +471,7 @@
     },
     "automatedDecisionMaking": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">15</span>Do they use automated decision making?",
+      "label": "<span class=\"number\">14</span>Do they use automated decision making?",
       "helper": "",
       "fields": {
         "usesAutomatedDecisionMaking": {
@@ -514,7 +499,7 @@
     },
     "complaintInformation": {
       "helperPosition": "above",
-      "label": "<span class=\"number\">16</span>Do they have information on how to make a complaint?",
+      "label": "<span class=\"number\">15</span>Do they have information on how to make a complaint?",
       "helper": "",
       "fields": {
         "present": {
@@ -688,7 +673,7 @@
       }
     },
     "presentation": {
-      "label": "<span class=\"number\">17</span>How is their privacy notice presented?",
+      "label": "<span class=\"number\">16</span>How is their privacy notice presented?",
       "fields": {
         "plainLanguage": {
           "label": "Was it written in plain language?",
