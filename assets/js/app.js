@@ -454,7 +454,7 @@ $(function() {
     $('.generated-json').val(JSON.stringify(payload, null, 2));
 
     // Populate mailto: link for email contributions
-    $('#button-email').attr('href', 'mailto:ian@projectsbyif.com?body=' +
+    $('#button-email').attr('href', 'mailto:' + emailAddress + '?body=' +
       JSON.stringify(payload));
 
     // Populate fields
