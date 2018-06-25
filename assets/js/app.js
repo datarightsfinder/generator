@@ -54,6 +54,15 @@ $(function() {
 
       $(this).parent().find('.form-custom-button')
         .css({'display': 'inline-block'});
+
+      $('[data-alpaca-field-path="/rights/access"], '
+          + '[data-alpaca-field-path="/rights/rectification"], '
+          + '[data-alpaca-field-path="/rights/erasure"], '
+          + '[data-alpaca-field-path="/rights/restrictProcessing"], '
+          + '[data-alpaca-field-path="/rights/dataPortability"], '
+          + '[data-alpaca-field-path="/rights/object"], '
+          + '[data-alpaca-field-path="/rights/automatedDecisionMaking"]')
+          .hide();
     }
   });
 
