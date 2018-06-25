@@ -369,7 +369,7 @@
         },
         "specificity": {
           "type": "radio",
-          "label": "Does the policy all mention third parties by name?",
+          "label": "Does the policy mention all third parties by name?",
           "hideNone": true,
           "optionLabels": [
             "Yes", "No"
