@@ -558,32 +558,32 @@
         "consent": {
           "label": "Consent",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "contract": {
           "label": "Contract",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "legalObligation": {
           "label": "Legal obligation",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "vitalInterests": {
           "label": "Vital interests",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "publicTask": {
           "label": "Public task",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "legitimateInterests": {
           "label": "Legitimate interests",
           "type": "textarea",
-          "placeholder": "Copy and paste information about this lawful basis here"
+          "placeholder": "How are they using this lawful basis?"
         },
         "observations": {
           "label": "Observations",
