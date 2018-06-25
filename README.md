@@ -1,10 +1,10 @@
-# Open Data Rights Generator
+# Data Rights Finder Generator
 
 ## Installation
 
 Requires [Node.js](https://nodejs.org) to be installed on your computer.
 
-1. Clone this repository with `git clone git@github.com/projectsbyif:open-data-rights-generator`
+1. Clone this repository with `git clone git@github.com:datarightsfinder/generator`
 
 2. `cd` into the repository
 
