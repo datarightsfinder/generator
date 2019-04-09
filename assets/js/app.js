@@ -2,8 +2,8 @@
 
 $(function() {
   $('#mainForm').alpaca({
-    'schemaSource': '/public/schema.json',
-    'optionsSource': '/public/options.json',
+    'schemaSource': '/schema.json',
+    'optionsSource': '/options.json',
     'postRender': function(form) {
       setupForm(form);
     },

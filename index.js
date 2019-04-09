@@ -3,6 +3,7 @@ const yaml = require('yamljs');
 const settings = yaml.load('settings.yaml');
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 const app = express();
 const http = require('http').Server(app);
 const nunjucks = require('nunjucks');
@@ -23,13 +24,6 @@ nunjucks.configure('views', {
   express: app,
 });
 
-app.use('/', function(req, res) {
-  res.render('index.html', {settings: settings});
-});
-
-// START SERVER
-http.listen(app.get('port'), function() {
-  console.log(settings.title);
-  console.log('Available at http://localhost:' + app.get('port'));
-  console.log('-------');
+app.render('index.html', {settings: settings}, function(err, html) {
+  fs.writeFileSync("public/index.html", html);
 });
