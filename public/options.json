@@ -266,7 +266,7 @@
     "organisationUrls": {
       "helperPosition": "above",
       "label": "<span class=\"number\">2</span>What websites do they run?",
-      "helper": "Enter the organisations main website, including any websites for subsiduaries.",
+      "helper": "Enter the organisation's main website, including any websites for subsiduaries. Press return to save each URL",
       "hideToolbarWithChildren": false,
       "toolbarSticky": true,
       "toolbarStyle": "link",
