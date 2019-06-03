@@ -3,7 +3,7 @@
     "organisationInformation": {
       "helperPosition": "above",
       "label": "<span class=\"number\">1</span>About the organisation",
-      "helper": "<span class=\"bold\">These fields are required.</span> Start by entering these details about the organisation. You can look up registration numbers and countries on <a href=\"https://opencorporates.com/\" target=\"_blank\">OpenCorporates</a>.",
+      "helper": "<span class=\"bold\">These fields are required.</span> Start by entering these details about the organisation. For companies, you can look up registration numbers and countries on <a href=\"https://opencorporates.com/\" target=\"_blank\">OpenCorporates</a>.",
       "fields": {
         "registrationCountry": {
           "noneLabel": " ",
