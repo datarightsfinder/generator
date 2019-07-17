@@ -424,6 +424,7 @@
         "list": {
           "type": "checkbox",
           "optionLabels": [
+            "App usage",
             "Bank account details",
             "Bank transactions",
             "Biometrics",
